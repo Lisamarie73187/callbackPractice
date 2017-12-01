@@ -102,7 +102,17 @@ contains(names, 'Colt', function(result){
 //and invoke the callback with the modified array as an argument.
 
 function uniq(array,cb){
-
+ for(var i = 0; i<array.length; i++){
+   console.log(array)
+   for(var j = 0; j<array.length; i++){
+     if([i] === [j]){
+     }else{ if(array[i] === array[j]){
+       array.splice(i,1)
+       i--
+     } }
+   }
+ }
+ return cb(array)
 }
 
 uniq(names, function(uniqArr){
