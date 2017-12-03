@@ -101,23 +101,12 @@ contains(names, 'Colt', function(result){
 // Remove any duplicate values from the array, 
 //and invoke the callback with the modified array as an argument.
 
-function uniq(array,cb){
- for(var i = 0; i<array.length; i++){
-   console.log(array)
-   for(var j = 0; j<array.length; i++){
-     if([i] === [j]){
-     }else{ if(array[i] === array[j]){
-       array.splice(i,1)
-       i--
-     } }
-   }
- }
- return cb(array)
-}
 
-uniq(names, function(uniqArr){
-  console.log('The new names array with all the duplicate items removed is ', uniqArr);
-});
+
+// console.log()
+// uniq(names, function(uniqArr){
+//   console.log('The new names array with all the duplicate items removed is ', uniqArr);
+// });
 
 
 // 6. Write a function called each that takes in an array of 
@@ -125,9 +114,9 @@ uniq(names, function(uniqArr){
 //invoke the callback and pass in the name and the name's 
 //index as arguments.
 
-function each(array,cb){
-  for(var i = 0; i < array.length; i++){
-    cb(array[i], [i])
+function each(arrayOfNames,cb){
+  for(var i = 0; i < arrayOfNames.length; i++){
+    cb(arrayOfNames[i], [i])
   }
 }
 
@@ -176,3 +165,5 @@ var users = [
 getUserById(users, '16t', function(user){
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
+
+//=================four left======================You're not done yet!
