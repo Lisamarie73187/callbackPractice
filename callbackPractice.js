@@ -100,13 +100,25 @@ contains(names, 'Colt', function(result){
 //callback function.
 // Remove any duplicate values from the array, 
 //and invoke the callback with the modified array as an argument.
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
+
+
+function uniq(myArray,cb){
+var uniqArr = []
+uniqArr = myArray.filter( (e,i,newArray) => newArray.indexOf(e) == i )
+return cb(uniqArr)
+}
+
+
+
 
 
 
 // console.log()
 // uniq(names, function(uniqArr){
 //   console.log('The new names array with all the duplicate items removed is ', uniqArr);
-// });
+// // });
 
 
 // 6. Write a function called each that takes in an array of 
@@ -162,8 +174,8 @@ var users = [
   },
 ];
 
-getUserById(users, '16t', function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
-});
+// getUserById(users, '16t', function(user){
+//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
+// });
 
-//=================four left======================You're not done yet!
+
